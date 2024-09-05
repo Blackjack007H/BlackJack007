@@ -1,57 +1,54 @@
-/* Global styles for all pages */
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f0f0f0;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Centering for main index page */
-.center-container {
+/* Header styles */
+header {
     text-align: center;
-    margin-top: 20vh; /* Vertically centers content */
+    padding: 2rem 0;
 }
 
-/* Headings */
-h1, h2 {
+header h1 {
+    font-size: 3rem;
     color: #4CAF50;
-    font-weight: normal;
-    margin-bottom: 1.5rem;
 }
 
-/* Links */
-a {
+/* Center content */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.center-container a {
+    display: block;
+    font-size: 2rem;
     color: #4CAF50;
     text-decoration: none;
-    font-size: 1.5rem;
-    margin-top: 20px;
-    display: inline-block;
+    margin: 1rem 0;
     transition: color 0.3s;
 }
 
-a:hover {
+.center-container a:hover {
     color: #333;
-    text-decoration: underline;
 }
 
-/* Content spacing for all subpages */
-.container {
-    margin: 2rem auto;
-    padding: 1rem;
-    max-width: 800px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Lists on the Weekly Updates page */
-ul {
-    padding-left: 1.5rem;
-}
-
-ul li {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #4CAF50;
+    color: white;
 }
 
