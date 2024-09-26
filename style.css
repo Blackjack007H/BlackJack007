@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    background-image: url('paved.jpg'); /* Ensure this is the correct path */
+    background-image: url('background.jpg'); /* Ensure this is the correct path */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center;
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@ header {
 
 header h1 {
     font-size: 3rem;
-    color: #ccc;
+    color: #fff;
 }
 
 /* Center content */
@@ -44,7 +44,7 @@ header h1 {
     display: block;
     font-size: 2rem;
     color: #fff;
-    background-color: #000;
+    background-color: #46b8b4;
     padding: 1rem 2rem;
     margin: 1rem 0;
     text-decoration: none;
