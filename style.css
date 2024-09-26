@@ -1,11 +1,12 @@
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('paved.jpg'); /* Ensure this is the correct path to your image */
-    background-size: cover;
+    background-color: #f0f0f0;
+    background-image: url('paved.jpg'); /* Ensure this is the correct path */
+    background-size: cover; /* Ensures the image covers the entire background */
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Keeps background fixed while scrolling */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
     color: #000;
     display: flex;
     flex-direction: column;
@@ -18,17 +19,13 @@ body {
 header {
     text-align: center;
     padding: 2rem 0;
-    background-color: transparent; /* Removes the white background */
+    z-index: 2; 
+    position: relative;
 }
 
-header h1, header h2 {
+header h1 {
     font-size: 3rem;
-    color: #fff; /* Ensures the text is readable against the background */
-    margin: 0;
-}
-
-header h2 {
-    font-size: 1.5rem;
+    color: #ccc;
 }
 
 /* Center content */
@@ -39,14 +36,15 @@ header h2 {
     align-items: center;
     text-align: center;
     flex-grow: 1;
-    z-index: 2;
+    z-index: 2; /* Ensures the buttons are on top of the background */
+    position: relative;
 }
 
 .center-container a.button {
     display: block;
     font-size: 2rem;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.7); /* Adds transparency to the buttons */
+    background-color: #000;
     padding: 1rem 2rem;
     margin: 1rem 0;
     text-decoration: none;
@@ -63,7 +61,14 @@ header h2 {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: transparent; /* Removes the green background */
-    color: white; /* Ensures the text is visible */
+   background-color: transparent;
+    color: black;
+    z-index: 2; /* Ensures the footer is above the background */
+    position: relative;
 }
 
+/* Ensures all content is above the background */
+header, .center-container, footer {
+    position: relative;
+    z-index: 2;
+}
