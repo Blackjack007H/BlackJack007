@@ -2,6 +2,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    background-image: url('background.jpg'); /* Ensure this is the correct path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
     color: #000;
     display: flex;
     flex-direction: column;
@@ -14,6 +19,9 @@ body {
 header {
     text-align: center;
     padding: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Adds transparency to the header background */
+    z-index: 2; /* Ensures the header is above the background */
+    position: relative;
 }
 
 header h1 {
@@ -29,6 +37,8 @@ header h1 {
     align-items: center;
     text-align: center;
     flex-grow: 1;
+    z-index: 2; /* Ensures the buttons are on top of the background */
+    position: relative;
 }
 
 .center-container a.button {
@@ -54,4 +64,13 @@ footer {
     padding: 1rem 0;
     background-color: #4CAF50;
     color: white;
+    z-index: 2; /* Ensures the footer is above the background */
+    position: relative;
 }
+
+/* Ensures all content is above the background */
+header, .center-container, footer {
+    position: relative;
+    z-index: 2;
+}
+
