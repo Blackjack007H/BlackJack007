@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sentiment Analysis Showcase</h1>
+    </header>
+
+    <section>
+        <h2>Project Summary</h2>
+        <p>This page showcases the results of my sentiment analysis on IMDb movie reviews.</p>
+        
+        <h2>Overall Sentiment Distribution</h2>
+        <canvas id="sentimentChart" width="400" height="200"></canvas> <!-- For chart display -->
+
+        <h2>Sample Review Classifications</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Review</th>
+                    <th>Sentiment Score</th>
+                    <th>Predicted Sentiment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data rows will go here -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Harper's Portfolio</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="showcase.js"></script> <!-- Link to your JavaScript file for functionality -->
+</body>
+</html>
