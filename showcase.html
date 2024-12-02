@@ -3,41 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentiment Analysis Showcase</title>
+    <title>Sentiment Analysis with Fine-Tuned BERT</title>
     <link rel="stylesheet" href="showcasestyle.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <h1>Sentiment Analysis Showcase</h1>
+        <h1>Sentiment Analysis on IMDb Reviews Using Fine-Tuned BERT</h1>
+        <p>Explore how I used BERT to classify movie reviews as positive or negative with high accuracy.</p>
     </header>
 
-    <section>
-        <h2>Project Summary</h2>
-        <p>This page showcases the results of my sentiment analysis on IMDb movie reviews.</p>
-        
-        <h2>Overall Sentiment Distribution</h2>
-        <canvas id="sentimentChart" width="400" height="200"></canvas> <!-- For chart display -->
-
-        <h2>Sample Review Classifications</h2>
-        <table id="data-table">
-            <thead>
-                <tr>
-                    <th>Review</th>
-                    <th>Sentiment Score</th>
-                    <th>Predicted Sentiment</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Data rows will go here -->
-            </tbody>
-        </table>
+    <!-- Interactive Demo Section -->
+    <section id="demo">
+        <h2>Interactive Model Demo</h2>
+        <p>Try the sentiment analysis demo below:</p>
+        <!-- Embed the Gradio app using an iframe -->
+        <iframe src="https://blackjack007007-MovieReviewSentiment.hf.space" width="100%" height="600" frameborder="0"></iframe>
     </section>
 
+    <section id="overview">
+        <h2>Project Overview</h2>
+        
+        <!-- Project Purpose and Background -->
+        <h3>Purpose and Background</h3>
+        <p>Sentiment analysis has become an essential tool in today’s digital landscape, where opinions and reviews are shared publicly across various platforms. With the vast amount of data available online, understanding public sentiment can offer powerful insights for businesses, marketers, and researchers. This project focuses on leveraging <strong>BERT (Bidirectional Encoder Representations from Transformers)</strong>, a state-of-the-art language model developed by Google, to analyze sentiment in movie reviews from IMDb.</p>
+        
+        <!-- Problem Statement -->
+        <h3>Problem Statement</h3>
+        <p>The goal of this project is to classify IMDb movie reviews as either <strong>positive</strong> or <strong>negative</strong> by fine-tuning a pre-trained BERT model on labeled sentiment data. Movie reviews are often complex, with nuanced language, idioms, and even sarcasm, making sentiment classification challenging. Traditional methods, such as basic machine learning models with bag-of-words features, often struggle to capture these intricacies. By utilizing BERT, we aim to enhance the accuracy and depth of sentiment analysis for movie reviews.</p>
+    
+        <!-- Project Objectives -->
+    <h3>Project Objectives</h3>
+    <p>The main objectives of this project are as follows:</p>
+    <ul>
+        <li><strong>Fine-Tune BERT on IMDb Reviews:</strong> Adapt a 
+        <a href="https://huggingface.co/bert-base-uncased" target="_blank">pre-trained BERT model</a> 
+        to the IMDb movie review dataset to capture sentiment-specific features of movie-related language.</li>
+        <li><strong>Achieve High Accuracy and Robustness:</strong> Aim for balanced performance across positive and negative reviews, ensuring minimal bias and high precision, recall, and F1-scores.</li>
+        <li><strong>Evaluate Model Performance:</strong> Assess the model using key metrics like accuracy, precision, recall, and F1-score, as well as by analyzing misclassifications to identify strengths and areas for improvement.</li>
+        <li><strong>Create an Interactive Demo:</strong> Develop an interactive interface where users can input text and receive real-time sentiment predictions from the model.</li>
+    </ul>
+    
+        <!-- Approach and Methodology -->
+        <h3>Approach and Methodology</h3>
+        <p>The project workflow involves several key steps:</p>
+        <ul>
+            <li><strong>Data Collection and Preprocessing:</strong> Use the IMDb dataset, consisting of 50,000 labeled movie reviews. Text preprocessing includes tokenization, truncation, and padding to ensure compatibility with BERT’s input requirements.</li>
+            <li><strong>Model Selection:</strong> Select BERT as the base model due to its bidirectional context processing and high performance on natural language tasks.</li>
+            <li><strong>Fine-Tuning:</strong> Train the BERT model on IMDb reviews using a carefully chosen learning rate, batch size, and early stopping to optimize for sentiment classification.</li>
+            <li><strong>Evaluation and Analysis:</strong> Evaluate model performance on test data and analyze metrics to understand how well the model generalizes to unseen reviews.</li>
+            <li><strong>Deployment and Demonstration:</strong> Implement an interactive interface where users can test the model on their own review texts.</li>
+        </ul>
+    
+        <!-- Potential Applications -->
+        <h3>Potential Applications</h3>
+        <p>This fine-tuned sentiment analysis model has a variety of potential applications beyond movie reviews. Some examples include:</p>
+        <ul>
+            <li><strong>Customer Feedback Analysis:</strong> Analyzing customer reviews for products, services, or restaurants to gain insights into customer satisfaction and brand perception.</li>
+            <li><strong>Social Media Monitoring:</strong> Tracking public sentiment on social media platforms to understand audience reaction to events, campaigns, or trends.</li>
+            <li><strong>Market Research:</strong> Conducting sentiment analysis on large volumes of online reviews or forum discussions to inform business decisions and marketing strategies.</li>
+            <li><strong>Content Moderation:</strong> Assisting in filtering or flagging extreme negative sentiment that could indicate harmful content.</li>
+        </ul>
+    
+        <!-- Expected Impact and Benefits -->
+        <h3>Expected Impact and Benefits</h3>
+        <p>This project showcases the effectiveness of BERT for nuanced text analysis and sentiment classification. By applying BERT to movie reviews, we demonstrate how transformer models can capture subtle language patterns and context, providing a more accurate and comprehensive view of sentiment than traditional NLP models. The project also emphasizes the value of fine-tuning pre-trained models, highlighting BERT’s flexibility for domain-specific tasks with relatively modest computational resources.</p>
+    </section>
+
+
+   <!-- Dataset Section -->
+   <section id="dataset">
+    <h2>Dataset</h2>
+    <p>I used the <a href="https://ai.stanford.edu/~amaas/data/sentiment/" target="_blank">IMDb dataset</a>, containing 50,000 movie reviews labeled as positive or negative. This balanced dataset provides an excellent foundation for training and evaluating sentiment analysis models.</p>
+    
+    <h3>Data Processing</h3>
+    <p>The text data was tokenized, truncated, and padded to fit BERT’s requirements, ensuring compatibility and consistency throughout the training process.</p>
+</section>
+
+    <!-- Model Training Section -->
+    <section id="model-training">
+        <h2>Model Fine-Tuning Process</h2>
+        <p>I fine-tuned a pre-trained BERT model using the following training parameters:</p>
+        <ul>
+            <li><strong>Learning Rate:</strong> 2e-5</li>
+            <li><strong>Batch Size:</strong> 8</li>
+            <li><strong>Epochs:</strong> 3</li>
+            <li><strong>Early Stopping:</strong> Implemented to prevent overfitting</li>
+            <li><strong>Checkpointing:</strong> Saved model state at each epoch for recovery and best model selection</li>
+        </ul>
+        <p>This training setup allowed us to achieve a balanced and robust model suitable for sentiment analysis.</p>
+    </section>
+
+
+    <!-- Evaluation Section -->
+<section id="evaluation">
+    <h2>Model Evaluation</h2>
+    <p>After training, the model was evaluated on a test dataset using various performance metrics to gauge its ability to classify sentiment accurately.</p>
+
+    <!-- Accuracy -->
+    <h3>Accuracy</h3>
+    <p>The model achieved an overall accuracy of <strong>92%</strong>, which indicates it correctly predicted the sentiment (positive or negative) for 92% of the test reviews. This high accuracy demonstrates the model’s effectiveness in generalizing to unseen data.</p>
+
+    <!-- Precision, Recall, F1-Score -->
+    <h3>Precision, Recall, and F1-Score</h3>
+    <p>To assess the model’s performance in more detail, I calculated precision, recall, and F1-score for both positive and negative classes:</p>
+    <ul>
+        <li><strong>Precision</strong>: Measures how often the model’s positive or negative predictions are correct. High precision means few false positives.</li>
+        <li><strong>Recall</strong>: Measures how well the model identifies all instances of a given class. High recall means few false negatives.</li>
+        <li><strong>F1-Score</strong>: The harmonic mean of precision and recall, providing a balanced measure of the model’s performance on both metrics.</li>
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-Score</th>
+                <th>Support</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Negative</td>
+                <td>0.90</td>
+                <td>0.96</td>
+                <td>0.93</td>
+                <td>12500</td>
+            </tr>
+            <tr>
+                <td>Positive</td>
+                <td>0.96</td>
+                <td>0.89</td>
+                <td>0.92</td>
+                <td>12500</td>
+            </tr>
+            <tr>
+                <td><strong>Average</strong></td>
+                <td>0.93</td>
+                <td>0.92</td>
+                <td>0.92</td>
+                <td>25000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Insights and Analysis -->
+    <h3>Insights and Analysis</h3>
+    <p>The model demonstrates balanced performance across both positive and negative classes. Key insights include:</p>
+    <ul>
+        <li><strong>High Precision for Positive Class</strong>: The model is very reliable when predicting positive sentiment, with few false positives.</li>
+        <li><strong>High Recall for Negative Class</strong>: The model captures most negative reviews accurately, with a recall of 0.96, meaning few negative reviews are missed.</li>
+        <li><strong>Balanced F1-Score</strong>: The F1-scores are high for both classes (0.93 for negative and 0.92 for positive), showing the model maintains a good balance between precision and recall.</li>
+    </ul>
+
+    <!-- Error Analysis -->
+    <h3>Error Analysis</h3>
+    <p>Upon examining misclassifications, I found that:</p>
+    <ul>
+        <li><strong>Subtle Sentiments</strong>: Reviews with subtle or mixed sentiments (e.g., “The movie was well-acted, but the story was dull.”) were occasionally misclassified, as BERT sometimes struggles with nuanced language.</li>
+        <li><strong>Complex Language</strong>: Reviews with complex sentence structures or sarcasm (e.g., “What a masterpiece... not!”) posed challenges for the model.</li>
+        <li><strong>Data Imbalance in Vocabulary</strong>: Certain uncommon words in the training data that are highly associated with one sentiment sometimes led to false positives or false negatives in the predictions.</li>
+    </ul>
+</section>
+
+    <!-- Conclusion & Future Work Section -->
+<section id="conclusion">
+    <h2>Conclusion & Future Work</h2>
+    
+    <!-- Summary of Model Performance -->
+    <h3>Summary of Model Performance</h3>
+    <p>The fine-tuned BERT model achieved high accuracy (92%) and balanced performance in classifying IMDb reviews as positive or negative. This demonstrates the model’s effectiveness in sentiment analysis, capturing both straightforward and complex sentiments in movie reviews.</p>
+    
+    <!-- Areas for Improvement -->
+    <h3>Areas for Improvement</h3>
+    <p>Despite strong results, there are areas for improvement:</p>
+    <ul>
+        <li><strong>Handling Nuanced Sentiments:</strong> The model struggles with reviews that contain mixed or subtle emotions, such as sarcasm or complex expressions.</li>
+        <li><strong>Generalization Across Domains:</strong> Since the model was trained on movie reviews, it may benefit from training on reviews from other domains, like product or social media comments, for broader applicability.</li>
+        <li><strong>Computational Efficiency:</strong> BERT is computationally intensive. Exploring lighter models like DistilBERT could make the model more efficient for real-time use.</li>
+    </ul>
+    
+    <!-- Future Work -->
+    <h3>Future Work</h3>
+    <p>To address these limitations, future work could focus on:</p>
+    <ul>
+        <li>Experimenting with alternative transformer models (e.g., RoBERTa, DistilBERT) for improved efficiency.</li>
+        <li>Fine-tuning on a multi-domain dataset to enhance generalization.</li>
+        <li>Exploring multi-class sentiment analysis to capture a broader range of emotions.</li>
+    </ul>
+</section>
+
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Harper's Portfolio</p>
+        <p>Harper C | <a href="https://github.com/Blackjack007H/BlackJack007" target="_blank">GitHub Repository</a></p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="showcase.js"></script> <!-- Link to your JavaScript file for functionality -->
 </body>
 </html>

@@ -1,12 +1,12 @@
-/* Global styles */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    background-image: url('background.jpg'); /* Ensure this is the correct path */
-    background-size: cover; /* Ensures the image covers the entire background */
+    background-image: url('background.jpg');
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-attachment: fixed; 
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,6 @@ body {
     margin: 0;
 }
 
-/* Header styles */
 header {
     text-align: center;
     padding: 2rem 0;
@@ -28,7 +27,6 @@ header h1 {
     color: #fff;
 }
 
-/* Center content */
 .center-container {
     display: flex;
     flex-direction: column;
@@ -36,7 +34,7 @@ header h1 {
     align-items: center;
     text-align: center;
     flex-grow: 1;
-    z-index: 2; /* Ensures the buttons are on top of the background */
+    z-index: 2; 
     position: relative;
 }
 
@@ -57,17 +55,15 @@ header h1 {
     color: #fff;
 }
 
-/* Footer styles */
 footer {
     text-align: center;
     padding: 1rem 0;
     background-color: transparent;
     color: white;
-    z-index: 2; /* Ensures the footer is above the background */
+    z-index: 2; 
     position: relative;
 }
 
-/* Ensures all content is above the background */
 header, .center-container, footer {
     position: relative;
     z-index: 2;
