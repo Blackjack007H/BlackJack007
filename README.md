@@ -1,4 +1,4 @@
-## CSPB 3112: Sentiment Analysis Project
+# CSPB 3112: Sentiment Analysis Project
 
 This is my **CSPB 3112: Sentiment Analysis Project** showcasing a sentiment analysis tool using a fine-tuned BERT model. The model is trained on the IMDb dataset and predicts the sentiment of movie reviews.
 
