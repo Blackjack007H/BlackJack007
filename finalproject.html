@@ -41,21 +41,56 @@
 
     <h2>Results</h2>
     <p>
-        The fine-tuned BERT model demonstrated strong performance, achieving an accuracy of 92%. This result highlights its ability to effectively classify sentiments in IMDb movie reviews, reliably distinguishing between positive and negative sentiments. This performance not only validated the model's design but also reinforced the viability of transformer-based architectures for real-world NLP tasks.
+        The fine-tuned BERT model demonstrated strong performance, achieving an accuracy of 92%. This result highlights its ability to effectively classify sentiments in IMDb movie reviews, reliably distinguishing between positive and negative sentiments. This performance not only validated the model's design but also reinforced the viability of transformer-based architectures for real-world NLP tasks. Throughout the project, I gained a deeper understanding of transformer models, the nuances of hyperparameter tuning, and the inherent challenges of fine-tuning NLP models. Importantly, the project met all initial goals, achieving accuracy benchmarks and successfully showcasing the results through an interactive demo.
     </p>
     <p>
-        Despite its strengths, the model faced some challenges when handling misclassifications. Reviews with mixed or subtle sentiments, such as “The movie was well-acted, but the story was dull,” were occasionally misinterpreted due to their nuanced tone. Similarly, sarcasm and complex sentence structures, like “What a masterpiece… not!,” posed significant difficulties for the model.
+        In addition to reaching these technical objectives, I developed key skills that are critical for future work. I significantly improved my ability to preprocess data, fine-tune advanced models, and create practical demonstrations of technical achievements. Deploying the model through a web interface was another milestone, as it required bridging the gap between machine learning development and user accessibility. This aspect of the project taught me the importance of presenting predictive results in a clear and interactive format, which proved to be both practical and impactful.
+    </p>
+    <p>
+        The model exhibited balanced performance across positive and negative classes, as evidenced by its metrics. For the positive class, the model showed high precision, meaning predictions for positive sentiment were highly reliable with minimal false positives. For the negative class, the model achieved a recall of 0.96, ensuring that it captured most negative reviews accurately. These results were complemented by balanced F1-scores of 0.93 for negative and 0.92 for positive, indicating a strong equilibrium between precision and recall across both classes.
+    </p>
+    <p>
+        Despite its strengths, the model faced some challenges when handling misclassifications. Reviews with mixed or subtle sentiments, such as “The movie was well-acted, but the story was dull,” were occasionally misinterpreted due to their nuanced tone. Similarly, sarcasm and complex sentence structures, like “What a masterpiece… not!,” posed significant difficulties for the model. Another issue stemmed from data imbalance in vocabulary, where certain rare words heavily associated with one sentiment skewed predictions, leading to occasional false positives or negatives.
+    </p>
+    <p>
+        These challenges offered valuable insights into areas where the model could be improved. Expanding the dataset to include more diverse examples of subtle or complex language could enhance the model’s robustness. Additionally, exploring advanced techniques for handling nuanced expressions, such as sentiment-specific fine-tuning or incorporating contextual embeddings, could further refine its accuracy. These findings underline the iterative nature of machine learning and the ongoing opportunities for improvement even in high-performing models.
     </p>
 
     <h2>Discussion / Reflection</h2>
     <p>
-        This project successfully achieved its goals, thanks to weekly planning, thorough research, and iterative testing. A key factor in its success was my ability to effectively leverage existing resources while adapting them to meet the unique needs of the project. One of the most significant challenges was understanding the nuances of fine-tuning and managing the computational demands of working with large NLP models like BERT. 
+        This project successfully achieved its goals, thanks to weekly planning from this course, thorough research, and iterative testing. A key factor in its success was my ability to effectively leverage existing resources while adapting them to meet the unique needs of the project. One of the most significant challenges was understanding the nuances of fine-tuning and managing the computational demands of working with large NLP models like BERT. To address these issues, I utilized cloud resources and sought insights from online communities, which proved invaluable. However, in hindsight, a more structured plan for hardware allocation and resource management could have further streamlined the process and saved time.
+    </p>
+    <p>
+        Fine-tuning the BERT model was undoubtedly one of the most time-intensive aspects of the project, requiring more than approximately 40 hours to complete. The computational demands of the model and the iterative adjustments needed to optimize performance made this phase particularly challenging. To ensure efficiency and mitigate potential setbacks, I implemented a checkpointing code. This approach allowed me to save the model's progress at regular intervals, ensuring that training could resume seamlessly if interrupted. This code was critical for maintaining momentum, as it prevented the loss of progress and minimized downtime, saving significant time and effort throughout the process.
+    </p>
+    <p>
+        If I were to approach the project again, I would dedicate additional time to exploring diverse datasets to enhance the model's applicability to a broader range of contexts. Despite this, I am good with the project’s results, particularly the interactive demo, which provides a tangible, user-friendly interface for showcasing the model’s capabilities.
+    </p>
+    <p>
+        Reflecting on this experience, I have gained a deeper appreciation for the importance of balancing technical depth with practical implementation. Managing time and resources effectively throughout the project has significantly boosted my confidence in tackling future challenges in the tech field. Overall, this project reinforced the value of aligning theoretical knowledge with practical applications to create impactful and accessible solutions.
     </p>
 
     <h2>Conclusion & Future Work</h2>
     <p>
-        Looking back, this project confirmed my interest in NLP. At present, I feel equipped with a robust foundational understanding of sentiment analysis and transformer models. 
+        Looking back, this project confirmed my interest in NLP. At present, I feel equipped with a robust foundational understanding of sentiment analysis and transformer models. Moving forward, I plan to expand the project to include multilingual sentiment analysis and explore additional NLP applications such as summarization and question answering.
     </p>
+    <p>
+        Despite strong results, there are areas for improvement. The model struggles with reviews that contain mixed or subtle emotions, such as sarcasm or complex expressions. Additionally, since the model was trained on movie reviews, it would benefit from training on reviews from other domains, such as product or social media comments, to enhance generalization. Computational efficiency is another area for improvement, as BERT is computationally intensive. Exploring lighter models like DistilBERT could make the model more efficient for real-time use.
+    </p>
+    <p>
+        To address these limitations, future work could focus on experimenting with alternative transformer models like RoBERTa and DistilBERT for improved efficiency. Fine-tuning on a multi-domain dataset could enhance generalization, and exploring multi-class sentiment analysis could capture a broader range of emotions. This project has been a deeply rewarding experience, and I’m excited to take the lessons I’ve learned here into future endeavors.
+    </p>
+
+    <h2>References or Bibliography</h2>
+    <ul>
+        <li><a href="https://huggingface.co/transformers/">Hugging Face Transformers Library</a></li>
+        <li><a href="https://ai.stanford.edu/~amaas/data/sentiment/">IMDb Large Movie Review Dataset</a></li>
+        <li><a href="https://huggingface.co/google-bert/bert-base-uncased">Pre-trained BERT model</a></li>
+        <li><a href="https://github.com/blackjack007007/imdb-sentiment-bert">Project Repository on GitHub</a></li>
+        <li><a href="https://huggingface.co/spaces/blackjack007007/MovieReviewSentiment">Hugging Face Spaces Demo</a></li>
+        <li><a href="https://pytorch.org/docs/">PyTorch Documentation</a></li>
+        <li><a href="https://www.tensorflow.org/docs">TensorFlow Documentation</a></li>
+    </ul>
 
     <a href="index.html" class="button">Back to Homepage</a>
 </body>
