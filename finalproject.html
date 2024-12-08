@@ -9,15 +9,6 @@
 <body>
     <h1>Final Project Report</h1>
 
-    <h2>Name:</h2>
-    <p>Harper Chen</p>
-
-    <h2>Course:</h2>
-    <p>CSPB 3112</p>
-
-    <h2>Title:</h2>
-    <p>Sentiment Analysis on IMDb Reviews Using Fine-Tuned BERT</p>
-
     <h2>Introduction</h2>
     <p>
         For this project, I aimed to create a sentiment analysis tool capable of categorizing movie reviews as positive or negative. This required leveraging advanced Natural Language Processing techniques and utilizing a pre-trained BERT model as the foundation. My primary focus was on fine-tuning the model to achieve both high accuracy and consistent performance, ensuring it could reliably handle the complexities of real-world data.
@@ -41,25 +32,30 @@
     <p>
         The bulk of the development work was conducted in Jupyter Notebook, which provided an efficient platform for experimentation and visualization during the model fine-tuning process. To make the project accessible to users, I created an interactive demo hosted on Hugging Face Spaces, leveraging its built-in Gradio interface. This demo allows users to input movie reviews and receive sentiment predictions in real time. The interface highlights the predictive capabilities of the model in an intuitive and user-friendly format, serving as a practical example of how advanced AI tools can be deployed for everyday applications.
     </p>
+    <p>
+        For version control and documentation, I used GitHub as the central repository, ensuring that every iteration of the project was properly tracked. Visual Studio Code served as my primary code editor, offering a streamlined environment for writing, testing, and refining code. Evaluation metrics such as accuracy, precision, recall, and F1-score were employed to gauge the model's performance and guide iterative improvements throughout the process.
+    </p>
+    <p>
+        My workflow involved several critical steps, including setting up the environment, exploring the dataset, fine-tuning the model, and optimizing hyperparameters to achieve the desired performance. Along the way, I meticulously documented the workflow, recorded challenges, and the solutions implemented to address them. The accompanying website further supports the project by presenting the technical details and providing a platform for interactive exploration, making the work accessible to both technical and non-technical audiences.
+    </p>
 
     <h2>Results</h2>
     <p>
         The fine-tuned BERT model demonstrated strong performance, achieving an accuracy of 92%. This result highlights its ability to effectively classify sentiments in IMDb movie reviews, reliably distinguishing between positive and negative sentiments. This performance not only validated the model's design but also reinforced the viability of transformer-based architectures for real-world NLP tasks.
     </p>
     <p>
-        The model exhibited balanced performance across positive and negative classes. For the positive class, the model showed high precision, meaning predictions for positive sentiment were highly reliable with minimal false positives. For the negative class, the model achieved a recall of 0.96, ensuring that it captured most negative reviews accurately. These results were complemented by balanced F1-scores of 0.93 for negative and 0.92 for positive, indicating a strong equilibrium between precision and recall across both classes.
+        Despite its strengths, the model faced some challenges when handling misclassifications. Reviews with mixed or subtle sentiments, such as “The movie was well-acted, but the story was dull,” were occasionally misinterpreted due to their nuanced tone. Similarly, sarcasm and complex sentence structures, like “What a masterpiece… not!,” posed significant difficulties for the model.
     </p>
 
-    <h2>References or Bibliography</h2>
-    <ul>
-        <li><a href="https://huggingface.co/transformers/">Hugging Face Transformers Library</a></li>
-        <li><a href="https://ai.stanford.edu/~amaas/data/sentiment/">IMDb Large Movie Review Dataset</a></li>
-        <li><a href="https://huggingface.co/google-bert/bert-base-uncased">Pre-trained BERT model</a></li>
-        <li><a href="https://github.com/blackjack007007/imdb-sentiment-bert">Project Repository on GitHub</a></li>
-        <li><a href="https://huggingface.co/spaces/blackjack007007/MovieReviewSentiment">Hugging Face Spaces Demo</a></li>
-        <li><a href="https://pytorch.org/docs/">PyTorch Documentation</a></li>
-        <li><a href="https://www.tensorflow.org/docs">TensorFlow Documentation</a></li>
-    </ul>
+    <h2>Discussion / Reflection</h2>
+    <p>
+        This project successfully achieved its goals, thanks to weekly planning, thorough research, and iterative testing. A key factor in its success was my ability to effectively leverage existing resources while adapting them to meet the unique needs of the project. One of the most significant challenges was understanding the nuances of fine-tuning and managing the computational demands of working with large NLP models like BERT. 
+    </p>
+
+    <h2>Conclusion & Future Work</h2>
+    <p>
+        Looking back, this project confirmed my interest in NLP. At present, I feel equipped with a robust foundational understanding of sentiment analysis and transformer models. 
+    </p>
 
     <a href="index.html" class="button">Back to Homepage</a>
 </body>
