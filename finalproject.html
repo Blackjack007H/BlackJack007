@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project - Sentiment Analysis</title>
+    <link rel="stylesheet" href="style-page.css">
+</head>
+<body>
+    <h1>Final Project Report</h1>
+
+    <h2>Name:</h2>
+    <p>Harper Chen</p>
+
+    <h2>Course:</h2>
+    <p>CSPB 3112</p>
+
+    <h2>Title:</h2>
+    <p>Sentiment Analysis on IMDb Reviews Using Fine-Tuned BERT</p>
+
+    <h2>Introduction</h2>
+    <p>
+        For this project, I aimed to create a sentiment analysis tool capable of categorizing movie reviews as positive or negative. This required leveraging advanced Natural Language Processing techniques and utilizing a pre-trained BERT model as the foundation. My primary focus was on fine-tuning the model to achieve both high accuracy and consistent performance, ensuring it could reliably handle the complexities of real-world data.
+    </p>
+    <p>
+        The broader vision for this project was to explore the practical applications of cutting-edge NLP technologies while gaining deeper insights into their inner workings. By working through the challenges of fine-tuning and deployment, I hoped to build a tool that was not only effective but also accessible. To achieve this, I developed an interactive demo designed to highlight the model’s predictive capabilities, providing an engaging and user-friendly experience. This project offered an opportunity to bridge theoretical concepts with hands-on implementation, allowing me to better understand how transformative technologies like NLP can address practical challenges.
+    </p>
+
+    <h2>Background</h2>
+    <p>
+        Sentiment analysis has become an invaluable tool across a wide range of industries, from customer service to entertainment, allowing organizations to derive meaningful insights from textual data. This project resonated with me because it merges my academic background in computer science with my passion for exploring emerging technologies like artificial intelligence. Professionally, mastering Natural Language Processing is essential for contributing to innovative AI-driven projects, particularly those that rely on understanding and processing human language effectively.
+    </p>
+    <p>
+        This project also provided a unique opportunity to connect theoretical knowledge with practical applications. By working with real-world data and creating a fully functional demo, I was able to gain hands-on experience that directly aligns with the demands of roles in the AI and technology sectors. The process of translating concepts into actionable outcomes not only enhanced my technical proficiency but also reinforced my confidence in applying advanced AI techniques to solve practical problems. Additionally, it underscored the significance of sentiment analysis in real-world scenarios, such as analyzing customer feedback or evaluating product reviews, where understanding sentiment plays a pivotal role in decision-making.
+    </p>
+
+    <h2>Methodology, Materials, and Methods</h2>
+    <p>
+        This project relied on several tools and methodologies to support its development and execution. The Hugging Face Transformers library, combined with PyTorch and TensorFlow, was integral to working with the BERT model. I utilized the IMDb movie review dataset, which contains labeled positive and negative reviews, as the foundation for training and evaluating the model. The pre-trained BERT model I selected was google-bert, which I fine-tuned for sentiment classification before uploading the optimized version to Hugging Face.
+    </p>
+    <p>
+        The bulk of the development work was conducted in Jupyter Notebook, which provided an efficient platform for experimentation and visualization during the model fine-tuning process. To make the project accessible to users, I created an interactive demo hosted on Hugging Face Spaces, leveraging its built-in Gradio interface. This demo allows users to input movie reviews and receive sentiment predictions in real time. The interface highlights the predictive capabilities of the model in an intuitive and user-friendly format, serving as a practical example of how advanced AI tools can be deployed for everyday applications.
+    </p>
+
+    <h2>Results</h2>
+    <p>
+        The fine-tuned BERT model demonstrated strong performance, achieving an accuracy of 92%. This result highlights its ability to effectively classify sentiments in IMDb movie reviews, reliably distinguishing between positive and negative sentiments. This performance not only validated the model's design but also reinforced the viability of transformer-based architectures for real-world NLP tasks.
+    </p>
+    <p>
+        The model exhibited balanced performance across positive and negative classes. For the positive class, the model showed high precision, meaning predictions for positive sentiment were highly reliable with minimal false positives. For the negative class, the model achieved a recall of 0.96, ensuring that it captured most negative reviews accurately. These results were complemented by balanced F1-scores of 0.93 for negative and 0.92 for positive, indicating a strong equilibrium between precision and recall across both classes.
+    </p>
+
+    <h2>References or Bibliography</h2>
+    <ul>
+        <li><a href="https://huggingface.co/transformers/">Hugging Face Transformers Library</a></li>
+        <li><a href="https://ai.stanford.edu/~amaas/data/sentiment/">IMDb Large Movie Review Dataset</a></li>
+        <li><a href="https://huggingface.co/google-bert/bert-base-uncased">Pre-trained BERT model</a></li>
+        <li><a href="https://github.com/blackjack007007/imdb-sentiment-bert">Project Repository on GitHub</a></li>
+        <li><a href="https://huggingface.co/spaces/blackjack007007/MovieReviewSentiment">Hugging Face Spaces Demo</a></li>
+        <li><a href="https://pytorch.org/docs/">PyTorch Documentation</a></li>
+        <li><a href="https://www.tensorflow.org/docs">TensorFlow Documentation</a></li>
+    </ul>
+
+    <a href="index.html" class="button">Back to Homepage</a>
+</body>
+</html>
